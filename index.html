@@ -16,8 +16,7 @@
                 const myArray = searchInput.split("e/");
                 const videoId = myArray[1];
                 const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-                const player = document.getElementById('player');
-                player.src = embedUrl;
+                document.getElementById('player').src = embedUrl;
     </script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
