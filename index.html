@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YouTube Video Search and Player</title>
+</head>
+
+<body>
+    <h1>YouTube Video Search and Player</h1>
+    <form id="searchForm">
+        <label for="searchInput">Search YouTube:</label>
+        <input type="text" id="searchInput" required>
+        <button type="submit">Search</button>
+    </form>
+    <br>
+    <div id="playerContainer">
+        <iframe id="player" width="640" height="360" src="" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/u0j_0bzMtvQ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function onYouTubeIframeAPIReady() {
+            const form = document.getElementById('searchForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const searchInput = document.getElementById('searchInput').value;
+                // searchYouTubeVideo(searchInput);
+                const myArray = searchInput.split("/");
+                const videoId = myArray[1];
+                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                const player = document.getElementById('player');
+                player.src = embedUrl;
+
+            });
+        }
+
+
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+
+</html>
