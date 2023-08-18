@@ -4,7 +4,7 @@
     <title>YouTube Playlist Player</title>
 </head>
 <body>
-    <h1>YouTube Playlist Player</h1>
+    <h1>YouTer</h1>
     <div class="d-grid gap-2 col-9 mx-auto">
         <button class="btn btn-danger btn-lg mx-250 my-5 fs-1" onclick="searchAndPlay()"><b>Start</b></button>
     </div>
@@ -28,12 +28,12 @@ function searchAndPlay(){
                         const iframe = document.getElementById('dynamicLink');
                         const iframeSrc = iframe.src;
 
-                        // if (iframeSrc) {
-                        //     // Open the URL of the iframe's content in a new tab
-                        //     window.open(iframeSrc, '_self');
-                        // } else {
-                        //     console.error('The iframe does not have a valid source URL.');
-                        // }
+                        if (iframeSrc) {
+                            // Open the URL of the iframe's content in a new tab
+                            window.open(iframeSrc, '_self');
+                        } else {
+                            console.error('The iframe does not have a valid source URL.');
+                        }
                         n++;
             localStorage.setItem('n', n);
 }
